@@ -8,7 +8,7 @@ ds<-filter(ds0, Date=="1/2/2007"|Date=="2/2/2007")
 ## remove original whole data set to release some memory
 rm(ds0)
 
-#add TimeStamp variable which is the combination of Date and Time variable
+#add TimeStamp variable which is the combination of Date and Time variables
 ds<-mutate(ds, TimeStamp=lubridate::dmy_hms(paste(Date, Time)))
 
 png("plot1.png", width = 480, height = 480)
